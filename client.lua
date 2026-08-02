@@ -80,11 +80,11 @@ if Config.Toggle then
     RegisterCommand('scoreboard', function()
         ToggleScoreboard(not scoreboardOpen)
     end, false)
-    RegisterKeyMapping('scoreboard', 'Toggle Scoreboard', 'keyboard', Config.OpenKey)
-else
+RegisterKeyMapping('scoreboard', 'Toggle Scoreboard', 'keyboard', Config.OpenKey or 'DELETE')else
     RegisterCommand('+scoreboard', function() ToggleScoreboard(true) end, false)
     RegisterCommand('-scoreboard', function() ToggleScoreboard(false) end, false)
-    RegisterKeyMapping('+scoreboard', 'Hold Scoreboard', 'keyboard', Config.OpenKey)
+RegisterKeyMapping('+scoreboard', 'Hold Scoreboard', 'keyboard', Config.OpenKey or 'DELETE')
+    
 end
 
 
